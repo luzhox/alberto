@@ -1,0 +1,367 @@
+*{
+	margin: 0; 
+	padding: 0; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 0px;
+	outline: 0;
+}
+html{ font-size: 10px;}
+body{ font-family: 'Gotham'; }
+
+@font-face {
+    font-family:'Gotham';
+    src: url('fonts/Gotham-Black.eot');
+	src: url('fonts/Gotham-Black.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Gotham-Black.woff2') format('woff2'),
+		url('fonts/Gotham-Black.woff') format('woff'),
+		url('fonts/Gotham-Black.svg#Gotham-Black') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+
+@font-face {
+    font-family:'Gotham';
+    src: url('fonts/Gotham-Bold.eot');
+	src: url('fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Gotham-Bold.woff2') format('woff2'),
+		url('fonts/Gotham-Bold.woff') format('woff'),
+		url('fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    
+}
+
+@font-face {
+    font-family:'Gotham';
+    src: url('fonts/Gotham-Book.eot');
+	src: url('fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Gotham-Book.woff2') format('woff2'),
+		url('fonts/Gotham-Book.woff') format('woff'),
+		url('fonts/Gotham-Book.svg#Gotham-Book') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+
+@font-face {
+    font-family:'Japooki';
+    src: url('fonts/jaapokki-regular.eot');
+	src: url('fonts/jaapokki-regular.eot?#iefix') format('embedded-opentype'),
+		url('fonts/jaapokki-regular.woff') format('woff'),
+		url('fonts/jaapokki-regular.ttf') format('ttf'),
+		url('fonts/jaapokki-regular.svg#jaapokki-regular') format('svg');
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ogdmol');
+  src:  url('fonts/icomoon.eot?ogdmol#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ogdmol') format('truetype'),
+    url('fonts/icomoon.woff?ogdmol') format('woff'),
+    url('fonts/icomoon.svg?ogdmol#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before {
+  content: "\e900";
+}
+.icon-behance:before {
+  content: "\e901";
+}
+.icon-face:before {
+  content: "\e90b";
+}
+
+
+button,a{
+	-webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+   text-decoration: none;
+   color: #4c4c4c;
+}
+p{font-size: 1.8rem;}
+b{ 
+	font-family: 'Gotham'; 
+	font-weight: 600; 
+	color: #4c4c4c; }
+img{width: 100%; height: auto;}
+h3{ font-family:'Gotham'; font-weight: 600; }
+section{
+	padding: 30px;
+}
+.title{ 
+	font-family:'Japooki';
+	font-size: 3.3rem; }
+.subtitle{ 
+	font-family:'Gotham';
+	text-align: center;
+	font-weight: 300;
+	font-size: 2.6rem;
+	margin-top: 10px;
+
+			 }
+
+.center{ 
+	text-align: center; }
+.container{ 
+	width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+	}
+
+.masinfo{
+	display: none;}
+
+.menu{
+	position: absolute;
+    color: white;
+    width: 100%;
+    max-width: 1024px;
+    padding-top: 20px;
+
+
+}
+.menu .logo{
+	font-size: 3rem;
+	color: white;
+	float: left;
+}
+.menu .navegacion{
+	float: right;
+	color: white;
+
+}
+
+.menu .navegacion li{ display: inline-block; list-style: none; padding-left: 10px; padding-top: 12px;}
+
+.menu .navegacion li a{ color:white; font-size: 2rem ; -webkit-transition: ease-in-out  .3s;
+-o-transition: ease-in-out  .3s;
+transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
+.menu .navegacion li a:hover{ border-bottom: 4px solid black; padding-bottom:4px; }
+
+
+    #header{
+	    width: 100vw;
+	    min-height: 90vh;
+	    background-image: url(../img/header.jpg);
+	    -webkit-background-size: cover;
+	    background-size: cover;
+	    background-position: center center;
+	    display: flex;
+	    align-items: center;
+	    justify-content: flex-start;
+	    color: white;
+	}
+	#header .title{
+		padding: 10px;
+		background-color: black;
+		max-width: 450px;
+		text-align: center;
+	}
+	#sobremi{
+		width: 100vw; 
+    	min-height: 80vh;
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#sobremi h2{}
+	#sobremi p{ 
+		line-height: 25px; 
+		margin: 0 auto; 
+		text-align: center;
+		font-size: 1.5rem;
+		 }
+	#sobremi .btn-masinfo{
+     border-radius: 10px;
+    background-color: #d24f4f;
+    color: white;
+    padding: 18px 72px;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: block;
+    cursor: pointer;
+	}
+
+	#sobremi .btn-masinfo:hover{
+		background-color: #951d1d;
+	}
+	#portafolio{
+		width: 100vw; 
+    	min-height: 80vh;
+		background-image: url(../img/portafolio-bg.jpg);
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-position: center center;
+		color:white;
+			display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 60px;
+		padding-top: 60px;
+	}
+	#portafolio h2{
+		margin-bottom: 20px;
+	}
+	#portafolio .contenedor-capacidades{
+	    width: 100%;
+	    margin: 0 auto;
+	    min-height: 340px;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-flow: wrap;
+	}
+	#portafolio .contenedor-capacidades .capacidad{
+		width: 100%;
+		text-align: center;
+		color: white;
+		margin-top: 40px;
+	}
+	#portafolio .contenedor-capacidades .capacidad img{
+		border-radius: 10px;
+		width: 50%;
+	}
+	#portafolio .contenedor-capacidades .capacidad h3{
+		font-size: 2rem;
+		padding-top: 1rem;
+	}
+	#contacto{
+		width: 100vw; 
+    	min-height: 80vh;
+		background-image: url(../img/contacto-bg.jpg);
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-position: center center;
+		padding-bottom: 60px;
+		padding-top: 60px;
+	}
+	#contacto h2{
+		color:white;
+	}
+
+	#contacto form{
+		margin:0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		-ms-align-items: center;
+		align-items: center;
+
+	}
+
+	#contacto input{
+		width: 100%; 
+		padding: 10px;
+		max-width: 450px;
+		border-radius: 10px;
+		margin: 10px;
+	}
+	#contacto input[type=submit]{
+		  background-color: #a52b2b;
+    color: white;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Gotham';
+    font-weight: 600;
+    height: 40px;
+    cursor: pointer;
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
+    transition: ease-in-out .3s;
+    
+	}
+	#contacto input[type=submit]:hover{
+
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		background-color: #951d1d;
+
+
+	}
+	#contacto .redes{
+		display: flex;
+		-ms-align-items: center;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		margin-top: 20px;
+	}	
+	#contacto .redes h3{
+		margin-right: 20px;
+	}
+
+	#contacto .socials{
+		display: flex;
+		flex-direction: row;
+	}
+
+	#contacto .socials .icon{
+		font-size: 4.5em;
+		padding: 5px;
+		color:white;
+		cursor: pointer;
+		-webkit-transition: ease-in-out .3s;
+		-o-transition: ease-in-out .3s;
+		transition: ease-in-out .3s;
+	}
+
+	#contacto .socials .icon:hover{
+		color: #ff3c3c;
+
+	}
+
+	@media only screen and (min-width:768px) {
+		.title{ 
+		font-family:'Japooki';
+		font-size: 4rem;
+		}
+		#header .title{
+		text-align: left;
+		}
+
+		#header .subtitle{
+			text-align: left; 
+			font-size: 3rem;
+		}
+
+		#sobremi p{ font-size:1.8rem; text-align: justify;}
+			#portafolio .contenedor-capacidades{
+				flex-direction: row;
+				flex-flow: initial;
+			}
+			#portafolio .contenedor-capacidades .capacidad{
+						margin: 10px;
+			}
+			#portafolio .contenedor-capacidades .capacidad img{
+						width: 100%;
+			}
+	}
