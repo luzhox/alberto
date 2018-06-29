@@ -298,9 +298,10 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
     -webkit-transition: ease-in-out .3s;
     -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
-    	-webkit-appearance: none;
-   -moz-appearance:    none;
-   appearance:         none;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+
     
 	}
 	#contacto input[type=submit]:hover{
@@ -313,7 +314,7 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
 	}
 	#contacto .redes{
 		display: flex;
-		flex-grow: column;
+		flex-direction: column;
 		-ms-align-items: center;
 		align-items: center;
 		justify-content: center;
@@ -322,6 +323,7 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
 	}	
 	#contacto .redes h3{
 		margin-right: 10px;
+		margin-bottom: 20px;
 	}
 
 	#contacto .socials{
@@ -352,13 +354,15 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
 		#header .title{
 		text-align: left;
 		}
-
+		#contacto .redes h3{
+			margin-bottom: 0px;
+		}
 		#header .subtitle{
 			text-align: left; 
 			font-size: 3rem;
 		}
 			#contacto .redes{
-		flex-grow: row;{}
+		flex-direction: row;}
 
 		#sobremi p{ font-size:1.8rem; text-align: justify;}
 			#portafolio .contenedor-capacidades{
