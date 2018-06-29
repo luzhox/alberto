@@ -313,6 +313,7 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
 	}
 	#contacto .redes{
 		display: flex;
+		flex-grow: column;
 		-ms-align-items: center;
 		align-items: center;
 		justify-content: center;
@@ -356,6 +357,8 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
 			text-align: left; 
 			font-size: 3rem;
 		}
+			#contacto .redes{
+		flex-grow: row;{}
 
 		#sobremi p{ font-size:1.8rem; text-align: justify;}
 			#portafolio .contenedor-capacidades{
