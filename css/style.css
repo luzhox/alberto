@@ -136,6 +136,7 @@ section{
 
 .masinfo{
 	display: none;}
+.masinfo2{display: none;}
 
 .menu{
 	position: absolute;
@@ -347,6 +348,7 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
 	}
 
 	@media only screen and (min-width:768px) {
+		.masinfo2{display: block;}
 		.title{ 
 		font-family:'Japooki';
 		font-size: 4rem;
