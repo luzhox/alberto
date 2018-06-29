@@ -229,7 +229,7 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
 		padding-top: 60px;
 	}
 	#portafolio h2{
-		margin-bottom: 20px;
+		margin-bottom: 0px;
 	}
 	#portafolio .contenedor-capacidades{
 	    width: 100%;
@@ -287,6 +287,7 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
 	}
 	#contacto input[type=submit]{
 		  background-color: #a52b2b;
+
     color: white;
     text-transform: uppercase;
     color: white;
@@ -297,6 +298,9 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
     -webkit-transition: ease-in-out .3s;
     -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
+    	-webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
     
 	}
 	#contacto input[type=submit]:hover{
