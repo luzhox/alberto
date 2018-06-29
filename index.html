@@ -15,6 +15,7 @@
 		<nav class="menu">
 
 			<div class="logo"><h1 class="title">LUIS TIPACTI</h1></div>
+			<div class="btnsanguche"> <span class="icon-menu"></span><span class="icon-close"></span></div>
 			<ul class="navegacion">
 				<li><a href="#sobremi">SOBRE MI</a></li>
 				<li><a href="#portafolio">PORTAFOLIO</a></li>
@@ -83,8 +84,25 @@
 			</div>
 		</div>
 	</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$('.btnsanguche').click(function(){
+		$(this).toggleClass('menuactivo')
+		$('.navegacion').toggleClass('active');
+		$('.icon-close').toggleClass('btn-activo');
+		$('.icon-menu').toggleClass('btn-inactivo');
+		
+	})
 
-	
+	$('.navegacion a').click(function(){
+		$('.btnsanguche').toggleClass('menuactivo')
+				$('.navegacion').toggleClass('active');
+
+		$('.icon-close').toggleClass('btn-activo');
+		$('.icon-menu').toggleClass('btn-inactivo');
+		
+	})
+	</script>
 </body>
 </html>
 

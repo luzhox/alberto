@@ -6,6 +6,7 @@
 	box-sizing: border-box;
 	border: 0px;
 	outline: 0;
+
 }
 html{ font-size: 10px;}
 body{ font-family: 'Gotham'; }
@@ -95,6 +96,12 @@ body{ font-family: 'Gotham'; }
 .icon-face:before {
   content: "\e90b";
 }
+.icon-close:before {
+  content: "\e903";
+}
+.icon-menu:before {
+  content: "\e902";
+}
 
 
 button,a{
@@ -116,7 +123,7 @@ section{
 }
 .title{ 
 	font-family:'Japooki';
-	font-size: 3.3rem; }
+	font-size: 3rem; }
 .subtitle{ 
 	font-family:'Gotham';
 	text-align: center;
@@ -150,17 +157,78 @@ section{
 .menu .logo{
 	font-size: 3rem;
 	color: white;
-	float: left;
-}
-.menu .navegacion{
+	text-align: center;
 	float: right;
+	padding-right: 50px;
+	text-align: center;
+	width: 80%;
+}
+.menu .btnsanguche{
+    float: left;
+    font-size: 30px;
+    padding-top: 5px;
+    width: 20%;
+    cursor: pointer;
+    }
+ .menu .btnsanguche span{
+ 	margin-left: 25px;
+ }
+ .menu .btnsanguche .icon-close{
+ 	display: none;
+ }
+ .btn-activo{
+ 	display: block!important;
+ }
+ .btn-inactivo{
+ 	display: none!important;
+ }
+.menu .navegacion{
 	color: white;
+	display: flex;
+
+    background-color: white;
+    color: #4c4c4c;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    -webkit-transition: ease-in-out .4s;
+    -o-transition: ease-in-out .4s;
+    transition: ease-in-out .4s;
+    -moz-transform: scale(0);
+-webkit-transform: scale(0);
+-o-transform: scale(0);
+-ms-transform: scale(0);
+transform: scale(0);
 
 }
+.menuactivo{position: fixed;
+    z-index: 2;
+    color: black;}
+.active{
+-moz-transform: scale(1)!important;
+-webkit-transform: scale(1)!important;
+-o-transform: scale(1)!important;
+-ms-transform: scale(1)!important;
+transform: scale(1)!important;
+opacity: 1!important;
+}
 
-.menu .navegacion li{ display: inline-block; list-style: none; padding-left: 10px; padding-top: 12px;}
+.menu .navegacion li{ 
 
-.menu .navegacion li a{ color:white; font-size: 2rem ; -webkit-transition: ease-in-out  .3s;
+	display: block;
+    list-style: none;
+    padding-left: 10px;
+    padding-top: 12px;
+
+    margin-bottom: 12px;
+}
+
+.menu .navegacion li a{ color:#4c4c4c; font-size: 2rem ; -webkit-transition: ease-in-out  .3s;
 -o-transition: ease-in-out  .3s;
 transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
 .menu .navegacion li a:hover{ border-bottom: 4px solid black; padding-bottom:4px; }
@@ -180,9 +248,10 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
 	}
 	#header .title{
 		padding: 10px;
-		background-color: black;
 		max-width: 450px;
 		text-align: center;
+		background-color: black;
+    	color: white;
 	}
 	#sobremi{
 		width: 100vw; 
@@ -296,9 +365,7 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
     font-weight: 600;
     height: 40px;
     cursor: pointer;
-    -webkit-transition: ease-in-out .3s;
-    -o-transition: ease-in-out .3s;
-    transition: ease-in-out .3s;
+    
     -webkit-appearance: none;
     -moz-appearance:    none;
     appearance:         none;
@@ -347,7 +414,39 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
 
 	}
 
-	@media only screen and (min-width:768px) {
+	@media only screen and (min-width:600px) {
+		#header{
+				    background-image: url(../img/header.jpg);
+
+		}
+		#header .title{background-color: black; color: white;}
+		.menu .logo{ width: 310px; }
+		.menu .btnsanguche{display: none;}
+		.menu .navegacion{float: right; display: block;
+
+
+		background-color: transparent;
+    color: white;
+    width: auto;
+    height: auto;
+    position: relative;
+    opacity: 1;
+        -moz-transform: scale(1);
+-webkit-transform: scale(1);
+-o-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1);
+    
+		}
+		.menu .logo{ text-align: left; float: left; }
+
+		.menu .navegacion li{ 
+	display: inline-block; 
+	list-style: none; 
+	border: 0px;
+	margin:0px;
+}
+	.menu .navegacion li a{ color:white;}
 		.masinfo2{display: block;}
 		.title{ 
 		font-family:'Japooki';
