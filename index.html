@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Luis Tipacti - Diseñador Publicitario</title>
+	<title>Luis Tipacti - Diseñador Gráfico</title>
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Hola, me llamo Luis Tipacti, soy Diseñador FreeLancer experto en illustrator, indesing y photoshop.">
@@ -11,6 +11,9 @@
 
 </head>
 <body>
+
+
+
 	<div class="container">
 		<nav class="menu">
 
@@ -22,7 +25,7 @@
 				<li><a href="#contacto">CONTACTO</a></li>
 			</ul>
 		</nav>
-	</div>
+	</div> 
 	<section id="header">
 
 		<div class="container">
@@ -31,6 +34,7 @@
 		<h2 class="subtitle ">Diseños creativos, efectivos y funcionales</h2>
 		</div>
 	</section>
+
 	<section id="sobremi">	
 		<div class="container">
 			<h2 class="title center">02 SOBRE MI</h2>
@@ -65,13 +69,16 @@
 			</div>
 		</div>
 	</section>
+
+
+
 	<section id="contacto">
 		<div class="container">
 			<h2 class="title center">04 CONTACTO</h2>
 			<form action="">
 				<input type="text" placeholder="NOMBRE">
-				<input type="text" placeholder="CORREO">
-				<input type="text" placeholder="MENSAGE">
+				<input type="email" placeholder="CORREO">
+				<input type="text" placeholder="MENSAJE">
 				<input type="submit" class="boton-form" name="submit" value="Enviar">
 			</form>
 			<div class="redes">
@@ -85,6 +92,44 @@
 		</div>
 	</section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
 	<script>
 	$('.btnsanguche').click(function(){
 		$(this).toggleClass('menuactivo')
@@ -93,7 +138,6 @@
 		$('.icon-menu').toggleClass('btn-inactivo');
 		
 	})
-
 	$('.navegacion a').click(function(){
 		$('.btnsanguche').toggleClass('menuactivo')
 				$('.navegacion').toggleClass('active');
@@ -101,6 +145,11 @@
 		$('.icon-close').toggleClass('btn-activo');
 		$('.icon-menu').toggleClass('btn-inactivo');
 		
+	})
+		$('.btn-masinfo').click(function(){
+		$(this).css('display','none');
+		$('.masinfo').slideDown()('slow');
+
 	})
 	</script>
 </body>

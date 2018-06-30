@@ -4,12 +4,12 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+
 	border: 0px;
 	outline: 0;
 
 }
 html{ font-size: 10px;}
-body{ font-family: 'Gotham'; }
 
 @font-face {
     font-family:'Gotham';
@@ -102,6 +102,7 @@ body{ font-family: 'Gotham'; }
 .icon-menu:before {
   content: "\e902";
 }
+body{ font-family: 'Gotham'; }
 
 
 button,a{
@@ -111,6 +112,8 @@ button,a{
    text-decoration: none;
    color: #4c4c4c;
 }
+
+
 p{font-size: 1.8rem;}
 b{ 
 	font-family: 'Gotham'; 
@@ -318,12 +321,13 @@ transition: ease-in-out  .3s;  padding-bottom: 10px; border-color:black;}
 	}
 	#portafolio .contenedor-capacidades .capacidad img{
 		border-radius: 10px;
-		width: 50%;
 	}
 	#portafolio .contenedor-capacidades .capacidad h3{
 		font-size: 2rem;
 		padding-top: 1rem;
 	}
+
+
 	#contacto{
 		width: 100vw; 
     	min-height: 80vh;
